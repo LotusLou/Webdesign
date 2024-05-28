@@ -18,9 +18,10 @@ function draw() {
 function zeichnen(){
     graph = true;
     stroke(0);
+    let term = document.getElementById("term").innerText;
     let x = minX;
     while(x <= -minX){
-        point (x + 300, -(x**2) + 200);
+        point (x + 300, -(eval(term)) + 200);
         x+=0.01;
     }
 }
@@ -101,6 +102,8 @@ function hoch(){
 } 
 
 function del(){
+    graph = false
+    koordinatensystem();
     document.getElementById("term").innerHTML = "";
 }
 
