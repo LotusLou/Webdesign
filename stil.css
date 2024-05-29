@@ -93,18 +93,18 @@ canvas{
     width: 100%;
     height: 400%;
 }
-a{
-    color: black; /* Standardfarbe für Links */
+a{/*Gestaltung der Links */
+    color: black; 
     margin: 20px;
     background-color: beige;
     border-radius: 18px;
     border-style: solid;
     border-color: blanchedalmond;
     padding: 4px;
-    text-decoration: none; /* Entfernt die Unterstreichung */
-    transition: color 0.3s ease; /* Weicher Übergang bei Farbänderung */
+    text-decoration: none; 
+    transition: color 0.3s ease; 
 }
 a:hover{
-    color: rgb(34, 14, 186); 
-    text-decoration: overline underline; 
+    color: rgb(115, 65, 9); 
+    text-decoration: inherit; 
 }
