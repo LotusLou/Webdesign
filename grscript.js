@@ -19,6 +19,8 @@ function zeichnen(){
     graph = true;
     stroke(0);
     let term = document.getElementById("term").innerText;
+    term = term.replace("^","**");
+    term = term.replace("×","*");
     let x = minX;
     while(x <= -minX){
         point (x + 300, -(eval(term)) + 200);
@@ -66,6 +68,11 @@ function gitter(s,r){
         y+= r;
     }
 }
+
+function zero(){
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "0";
+}
 function eins(){
     let aktuelleEingabe = document.getElementById("term").innerText; 
     document.getElementById("term").innerHTML = aktuelleEingabe + "1";
@@ -76,10 +83,41 @@ function zwei(){
     document.getElementById("term").innerHTML = aktuelleEingabe + "2"; 
 } 
 
-function zwei(){
+function drei(){
     let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "2"; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "3"; 
 } 
+
+function vier(){
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "4"; 
+} 
+
+function fünf(){
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "5"; 
+} 
+
+function sechs(){
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "6"; 
+} 
+
+function sieben(){
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "7"; 
+} 
+
+function acht(){
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "8"; 
+} 
+
+function neun(){
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "9"; 
+} 
+
 
 function x(){
     let aktuelleEingabe = document.getElementById("term").innerText; 
@@ -90,16 +128,31 @@ function plus(){
     let aktuelleEingabe = document.getElementById("term").innerText; 
     document.getElementById("term").innerHTML = aktuelleEingabe + "+"; 
 } 
+function minus(){
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "-"; 
+} 
 
 function mal(){
     let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "*"; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "×"; 
 } 
+
+function geteilt(){
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "/"; 
+} 
+
 
 function hoch(){
     let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "**"; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "^"; 
 } 
+
+function wurzel(){
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + "√";
+}
 
 function del(){
     graph = false
