@@ -2,7 +2,7 @@
 let minX = -290
 let minY = -190
 let graph = false;
-
+let gespeicherteFunktion = [];
 function setup() {
     createCanvas(600, 400);
     background(220);
@@ -70,88 +70,71 @@ function gitter(s,r){
 }
 
 function zero(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "0";
+    demTermhinzufügen("0")
 }
 function eins(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "1";
+    demTermhinzufügen("1")
 } 
 
 function zwei(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "2"; 
+    demTermhinzufügen("2")
 } 
 
 function drei(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "3"; 
+    demTermhinzufügen("3") 
 } 
 
 function vier(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "4"; 
+    demTermhinzufügen("4") 
 } 
 
 function fünf(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "5"; 
+    demTermhinzufügen("5")
 } 
 
 function sechs(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "6"; 
+    demTermhinzufügen("6")
 } 
 
 function sieben(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "7"; 
+    demTermhinzufügen("7")
 } 
 
 function acht(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "8"; 
+    demTermhinzufügen("8")
 } 
 
 function neun(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "9"; 
+    demTermhinzufügen("9") 
 } 
 
 
 function x(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "x"; 
+    demTermhinzufügen("x") 
 } 
 
 function plus(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "+"; 
+    demTermhinzufügen("+")
 } 
 function minus(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "-"; 
+    demTermhinzufügen("-")
 } 
 
 function mal(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "×"; 
+    demTermhinzufügen("×")
 } 
 
 function geteilt(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "/"; 
+    demTermhinzufügen("/") 
 } 
 
 
 function hoch(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "^"; 
+    demTermhinzufügen("^")
 } 
 
 function wurzel(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "√";
+    demTermhinzufügen("√")
 }
 
 function del(){
@@ -159,5 +142,36 @@ function del(){
     koordinatensystem();
     document.getElementById("term").innerHTML = "";
 }
-
-
+//Einen Wert dem Term hinzufügen
+function demTermhinzufügen(wert) {
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + wert; 
+}
+// Funktion zum eine Funktion speichern
+function speichereFunktion() {
+    let aktuelleEingabe = document.getElementById("term").innerText;
+    if (aktuelleEingabe.trim() !== "") {
+        gespeicherteFunktion.push(aktuelleEingabe);
+        aktualisiereGespeicherteFunktionen();
+    }
+}
+// Anzeige gespeicherter Funktionen aktualisieren
+function aktualisiereGespeicherteFunktionen() {
+    let gespeicherteFunktionListe = document.getElementById("gespeicherteFunktionen");
+    gespeicherteFunktionListe.innerHTML = "";
+    gespeicherteFunktion.forEach((func, index) => {
+        let li = document.createElement("li");
+        li.innerText = func;
+        li.onclick = () => selectFunction(index);
+        gespeicherteFunktionListe.appendChild(li);
+    });
+}
+// Gespeicherte Funktion auswählen und zeichnen
+function selectFunction(index) {
+    document.getElementById("term").innerText = gespeicherteFunktion[index];
+    zeichnen();
+}
+document.addEventListener("DOMContentLoaded", () => {
+    // Erstellen und Hinzufügen der Liste für gespeicherte Funktionen
+    aktualisiereGespeicherteFunktionen();
+})

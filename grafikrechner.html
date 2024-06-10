@@ -14,40 +14,41 @@
     
         <div class="zeile">
             <div class="y"> y =  </div>
-            <div class="term" id="term">  </div>
-        </div>
-        
-        <div class="zeile">    
-            <button onclick="eins()"> 1 </button>
-            <button onclick="zwei()"> 2 </button>
-            <button onclick="drei()"> 3 </button>
-            <button onclick="plus()"> + </button>   
-            <button onclick="minus()"> - </button>           
+            <div class="term" id="term" contenteditable="true">  </div>
         </div>
         <div class="zeile">    
+            <button class="quadratButton" onclick="eins()"> 1 </button>
+            <button class="quadratButton" onclick="zwei()"> 2 </button>
+            <button class="quadratButton" onclick="drei()"> 3 </button>
+            <button class="quadratButton" onclick="plus()"> + </button>   
+            <button class="quadratButton" onclick="minus()"> - </button>           
+        </div>
+        <div class="zeile">    
         
-            <button onclick="vier()"> 4 </button>
-            <button onclick="fünf()"> 5 </button>
-            <button onclick="sechs()"> 6 </button>
-            <button onclick="mal()"> × </button> 
-            <button onclick="geteilt()"> / </button>    
+            <button class="quadratButton" onclick="vier()"> 4 </button>
+            <button class="quadratButton" onclick="fünf()"> 5 </button>
+            <button class="quadratButton" onclick="sechs()"> 6 </button>
+            <button class="quadratButton" onclick="mal()"> × </button> 
+            <button class="quadratButton" onclick="geteilt()"> / </button>    
             
         </div>
         <div class="zeile">    
-            <button onclick="sieben()"> 7 </button>
-            <button onclick="acht()"> 8 </button>
-            <button onclick="neun()"> 9 </button>
-            <button onclick="hoch()"> ^ </button> 
-            <button onclick="wurzel()"> √ </button>      
+            <button class="quadratButton" onclick="sieben()"> 7 </button>
+            <button class="quadratButton" onclick="acht()"> 8 </button>
+            <button class="quadratButton" onclick="neun()"> 9 </button>
+            <button class="quadratButton" onclick="hoch()"> ^ </button> 
+            <button class="quadratButton" onclick="wurzel()"> √ </button>      
         </div>
         <div class="zeile">   
-            <button onclick="zero()"> 0 </button> 
-            <button onclick="x()"> X </button>
-            <button onclick="del()"> del </button>  
-            <button onclick="zeichnen()"> go </button>           
+            <button class="quadratButton" onclick="zero()"> 0 </button> 
+            <button class="quadratButton" onclick="x()"> X </button>
+            <button class="quadratButton" onclick="del()"> del </button>  
+            <button class="quadratButton" onclick="zeichnen()"> go </button>           
         </div>
-        
-
+        <div class="zeile">
+            <button class="rechteckigerButton" onclick="speichereFunktion()"> Speichern</button>
+        </div>
+        <div><ul id="gespeicherteFunktionen"></ul></div>
         </div>
     </div>
     <div class="beschreibungGr"> 
@@ -56,6 +57,7 @@
             <li> ERSTER PUNKT  </li>
             <li> ZWEITER PUNKT </li>
         </ul>
-    </div>    
+    </div> 
+    <script src="/grscript.js"></script>   
 </body>
 </html>
