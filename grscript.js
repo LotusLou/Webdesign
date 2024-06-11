@@ -1,8 +1,9 @@
-
+//Variabeln 
 let minX = -290
 let minY = -190
 let graph = false;
 let gespeicherteFunktion = [];
+
 function setup() {
     createCanvas(600, 400);
     background(220);
@@ -13,8 +14,8 @@ function draw() {
     if (graph){
     zeichnen();
     }
-
 } 
+//Function fürs Zeichnen des Termes 
 function zeichnen(){
     graph = true;
     stroke(0);
@@ -27,7 +28,7 @@ function zeichnen(){
         x+=0.01;
     }
 }
-
+//Funktion für das vollständige Kordinatensystem 
 function koordinatensystem(){
     background (220);
     gitter(200, 10)
@@ -40,6 +41,7 @@ function koordinatensystem(){
     triangle (590,200,580,205,580,195);
     strahlzahlen();
 }
+//Funktion für die Zahlen auf dem Strahl
 function strahlzahlen(){
     let x = minX - minX%50;
     while(x <= -minX) {
@@ -54,6 +56,7 @@ function strahlzahlen(){
         y+=50
     }
 }
+//Funktion fürs Erstellen des Gitters 
 function gitter(s,r){
     let x = minX - minX%50;
     while(x <= -minX) {
@@ -68,75 +71,75 @@ function gitter(s,r){
         y+= r;
     }
 }
-
+//Funktion für die Nummer 0
 function zero(){
     demTermhinzufügen("0")
 }
+//Funktion für die Nummer 1
 function eins(){
     demTermhinzufügen("1")
 } 
-
+//Funktion für die Nummer 2
 function zwei(){
     demTermhinzufügen("2")
 } 
-
+//Funktion für die Nummer 3
 function drei(){
     demTermhinzufügen("3") 
 } 
-
+//Funktion für die Nummer 4
 function vier(){
     demTermhinzufügen("4") 
 } 
-
+//Funktion für die Nummer 5
 function fünf(){
     demTermhinzufügen("5")
 } 
-
+//Funktion für die Nummer 6
 function sechs(){
     demTermhinzufügen("6")
 } 
-
+//Funktion für die Nummer 7 
 function sieben(){
     demTermhinzufügen("7")
 } 
-
+//Funktion für die Nummer 8 
 function acht(){
     demTermhinzufügen("8")
 } 
-
+//Funktion für die Nummer 9 
 function neun(){
     demTermhinzufügen("9") 
 } 
-
-
+//Funktion für die X Variable 
 function x(){
     demTermhinzufügen("x") 
 } 
-
+//Funktion für Additions Operation 
 function plus(){
     demTermhinzufügen("+")
 } 
+//Funktion für Subtraktions Operation
 function minus(){
     demTermhinzufügen("-")
 } 
-
+//Funktion für Mulitplikation Operation
 function mal(){
     demTermhinzufügen("×")
 } 
-
+//Funktion für Teilungs Operation 
 function geteilt(){
     demTermhinzufügen("/") 
 } 
-
-
+//Funktion für Potenz Operation 
 function hoch(){
     demTermhinzufügen("^")
 } 
-
+//Funktion für Wurzel Operation 
 function wurzel(){
     demTermhinzufügen("√")
 }
-
+//Funktion fürs Löschen des Graphen
 function del(){
     graph = false
     koordinatensystem();
