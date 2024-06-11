@@ -14,13 +14,20 @@ html,body{
 
 button{
     margin: 2px;
-    width: 39px;
-    height: 39px;
     border-radius: 12px;
     border-style: solid;
     border-color: blanchedalmond;
     background-color: beige;
     font-family: Arial, Helvetica, sans-serif;
+}
+.quadratButton{
+    width: 39px;
+    height: 39px;
+}
+
+.rechteckigerButton{
+    width: 166px;
+    height: 39px;
 }
 
 button:hover{

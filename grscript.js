@@ -1,7 +1,8 @@
-
+//Variabeln 
 let minX = -290
 let minY = -190
 let graph = false;
+let gespeicherteFunktion = [];
 
 function setup() {
     createCanvas(600, 400);
@@ -13,8 +14,8 @@ function draw() {
     if (graph){
     zeichnen();
     }
-
 } 
+//Function fürs Zeichnen des Termes 
 function zeichnen(){
     graph = true;
     stroke(0);
@@ -27,7 +28,7 @@ function zeichnen(){
         x+=0.01;
     }
 }
-
+//Funktion für das vollständige Kordinatensystem 
 function koordinatensystem(){
     background (220);
     gitter(200, 10)
@@ -40,6 +41,7 @@ function koordinatensystem(){
     triangle (590,200,580,205,580,195);
     strahlzahlen();
 }
+//Funktion für die Zahlen auf dem Strahl
 function strahlzahlen(){
     let x = minX - minX%50;
     while(x <= -minX) {
@@ -54,6 +56,7 @@ function strahlzahlen(){
         y+=50
     }
 }
+//Funktion fürs Erstellen des Gitters 
 function gitter(s,r){
     let x = minX - minX%50;
     while(x <= -minX) {
@@ -68,96 +71,110 @@ function gitter(s,r){
         y+= r;
     }
 }
-
+//Funktion für die Nummer 0
 function zero(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "0";
+    demTermhinzufügen("0")
 }
+//Funktion für die Nummer 1
 function eins(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "1";
+    demTermhinzufügen("1")
 } 
-
+//Funktion für die Nummer 2
 function zwei(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "2"; 
+    demTermhinzufügen("2")
 } 
-
+//Funktion für die Nummer 3
 function drei(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "3"; 
+    demTermhinzufügen("3") 
 } 
-
+//Funktion für die Nummer 4
 function vier(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "4"; 
+    demTermhinzufügen("4") 
 } 
-
+//Funktion für die Nummer 5
 function fünf(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "5"; 
+    demTermhinzufügen("5")
 } 
-
+//Funktion für die Nummer 6
 function sechs(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "6"; 
+    demTermhinzufügen("6")
 } 
-
+//Funktion für die Nummer 7 
 function sieben(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "7"; 
+    demTermhinzufügen("7")
 } 
-
+//Funktion für die Nummer 8 
 function acht(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "8"; 
+    demTermhinzufügen("8")
 } 
-
+//Funktion für die Nummer 9 
 function neun(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "9"; 
+    demTermhinzufügen("9") 
 } 
-
-
+//Funktion für die X Variable 
 function x(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "x"; 
+    demTermhinzufügen("x") 
 } 
-
+//Funktion für Additions Operation 
 function plus(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "+"; 
+    demTermhinzufügen("+")
 } 
+//Funktion für Subtraktions Operation
 function minus(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "-"; 
+    demTermhinzufügen("-")
 } 
-
+//Funktion für Mulitplikation Operation
 function mal(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "×"; 
+    demTermhinzufügen("×")
 } 
-
+//Funktion für Teilungs Operation 
 function geteilt(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "/"; 
+    demTermhinzufügen("/") 
 } 
-
-
+//Funktion für Potenz Operation 
 function hoch(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "^"; 
+    demTermhinzufügen("^")
 } 
-
+//Funktion für Wurzel Operation 
 function wurzel(){
-    let aktuelleEingabe = document.getElementById("term").innerText; 
-    document.getElementById("term").innerHTML = aktuelleEingabe + "√";
+    demTermhinzufügen("√")
 }
-
+//Funktion fürs Löschen des Graphen
 function del(){
     graph = false
     koordinatensystem();
     document.getElementById("term").innerHTML = "";
 }
-
-
+//Einen Wert dem Term hinzufügen
+function demTermhinzufügen(wert) {
+    let aktuelleEingabe = document.getElementById("term").innerText; 
+    document.getElementById("term").innerHTML = aktuelleEingabe + wert; 
+}
+// Funktion zum eine Funktion speichern
+function speichereFunktion() {
+    let aktuelleEingabe = document.getElementById("term").innerText;
+    if (aktuelleEingabe.trim() !== "") {
+        gespeicherteFunktion.push(aktuelleEingabe);
+        aktualisiereGespeicherteFunktionen();
+    }
+}
+// Anzeige gespeicherter Funktionen aktualisieren
+function aktualisiereGespeicherteFunktionen() {
+    let gespeicherteFunktionListe = document.getElementById("gespeicherteFunktionen");
+    gespeicherteFunktionListe.innerHTML = "";
+    gespeicherteFunktion.forEach((func, index) => {
+        let li = document.createElement("li");
+        li.innerText = func;
+        li.onclick = () => selectFunction(index);
+        gespeicherteFunktionListe.appendChild(li);
+    });
+}
+// Gespeicherte Funktion auswählen und zeichnen
+function selectFunction(index) {
+    document.getElementById("term").innerText = gespeicherteFunktion[index];
+    zeichnen();
+}
+document.addEventListener("DOMContentLoaded", () => {
+    // Erstellen und Hinzufügen der Liste für gespeicherte Funktionen
+    aktualisiereGespeicherteFunktionen();
+})
