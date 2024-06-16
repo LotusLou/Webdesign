@@ -180,11 +180,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Erstellen und Hinzufügen der Liste für gespeicherte Funktionen
     aktualisiereGespeicherteFunktionen();
 })
-//Unklar warum nicht Funktioniert
-function zoomediting(){
-    zoom = document.getElementById("zoom").innerText 
-    zoom = parseFloat(zoom)
-    if (!isNaN=zoom) {
+//Funktion um den Zoom des Kordinatensystem anzupassen.
+function zoombearbeitung(){
+    let x = document.getElementById("zoom").innerText 
+    zoom = parseFloat(x)
+    if (!isNaN (zoom)) {
         koordinatensystem()
         if(graph){
             zeichnen()
