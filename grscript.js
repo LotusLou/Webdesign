@@ -3,6 +3,7 @@ let minX = -290
 let minY = -190
 let graph = false;
 let gespeicherteFunktion = [];
+let zoom = 10
 
 function setup() {
     createCanvas(600, 400);
@@ -13,8 +14,9 @@ function draw() {
     koordinatensystem();
     if (graph){
     zeichnen();
-    }
+    } 
 } 
+
 //Function fürs Zeichnen des Termes 
 function zeichnen(){
     graph = true;
@@ -24,7 +26,7 @@ function zeichnen(){
     term = term.replace("×","*");
     let x = minX;
     while(x <= -minX){
-        point (x + 300, -(eval(term)) + 200);
+        point (x*zoom + 300, -(eval(term))*zoom + 200);
         x+=0.01;
     }
 }
@@ -46,13 +48,13 @@ function strahlzahlen(){
     let x = minX - minX%50;
     while(x <= -minX) {
         stroke(180)
-        text(x, x + 300, 220);
+        text(x/zoom, x + 300, 220);
         x+=50
     }
     let y = minY - minY%50;
     while(y <= -minY) {
         stroke(180);
-        text(y, 305, (-y) + 200);
+        text(y/zoom, 305, (-y) + 200);
         y+=50
     }
 }
@@ -178,3 +180,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Erstellen und Hinzufügen der Liste für gespeicherte Funktionen
     aktualisiereGespeicherteFunktionen();
 })
+//Funktion um den Zoom des Kordinatensystem anzupassen.
+function zoombearbeitung(){
+    let x = document.getElementById("zoom").innerText 
+    zoom = parseFloat(x)
+    if (!isNaN (zoom)) {
+        koordinatensystem()
+        if(graph){
+            zeichnen()
+        }
+    } 
+    else {
+        alert("Fehler:Ungültige Zahl")
+    }
+}
