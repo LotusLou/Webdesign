@@ -20,6 +20,7 @@ function draw() {
 //Function fürs Zeichnen des Termes 
 function zeichnen(){
     graph = true;
+    koordinatensystem();
     stroke(0);
     let term = document.getElementById("term").innerText;
     term = term.replace("^","**");
@@ -194,3 +195,5 @@ function zoombearbeitung(){
         alert("Fehler:Ungültige Zahl")
     }
 }
+//Todo's: Liste und Zoom funktion. Verschiebung
+//Beschreibungen machen
