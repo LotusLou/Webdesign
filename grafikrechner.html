@@ -1,68 +1,75 @@
 <html>
 <head>
-    <title> Grafikrechner</title>
+    <title>Grafikrechner</title>
+    <!-- Verlinkung zu CSS-Datei -->
     <link rel="stylesheet" href="stil.css">
+    <!-- Verbindung mit der JavaScript-Datei -->
     <script src="grscript.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/addons/p5.sound.min.js"></script>
     <meta charset="utf-8" />
+    <!-- Link zu einer anderen Seite -->
     <a href="/taschenrechner.html">Taschenrechner</a>
 </head>
 
 <body>
+    <!-- Eingabebereich für den Grafikrechner -->
     <div class="eingabeumgebung">
-    
         <div class="zeile">
-            <div class="y"> y =  </div>
-            <div class="term" id="term" contenteditable="true">  </div>
+            <div class="y">y = </div>
+            <!-- Bereich für die Funktionseingabe, der bearbeitet werden kann -->
+            <div class="term" id="term" contenteditable="true"></div>
         </div>
-        <div class="zeile">    
-            <button class="quadratButton" onclick="eins()"> 1 </button>
-            <button class="quadratButton" onclick="zwei()"> 2 </button>
-            <button class="quadratButton" onclick="drei()"> 3 </button>
-            <button class="quadratButton" onclick="plus()"> + </button>   
-            <button class="quadratButton" onclick="minus()"> - </button>           
+        <!-- Zeile mit Tasten für die Eingabe -->
+        <div class="zeile">
+            <button class="quadratButton" onclick="eins()">1</button>
+            <button class="quadratButton" onclick="zwei()">2</button>
+            <button class="quadratButton" onclick="drei()">3</button>
+            <button class="quadratButton" onclick="plus()">+</button>
+            <button class="quadratButton" onclick="minus()">-</button>
         </div>
-        <div class="zeile">    
-        
-            <button class="quadratButton" onclick="vier()"> 4 </button>
-            <button class="quadratButton" onclick="fünf()"> 5 </button>
-            <button class="quadratButton" onclick="sechs()"> 6 </button>
-            <button class="quadratButton" onclick="mal()"> × </button> 
-            <button class="quadratButton" onclick="geteilt()"> / </button>    
-            
-        </div>
-        <div class="zeile">    
-            <button class="quadratButton" onclick="sieben()"> 7 </button>
-            <button class="quadratButton" onclick="acht()"> 8 </button>
-            <button class="quadratButton" onclick="neun()"> 9 </button>
-            <button class="quadratButton" onclick="hoch()"> ^ </button> 
-            <button class="quadratButton" onclick="wurzel()"> √ </button>      
-        </div>
-        <div class="zeile">   
-            <button class="quadratButton" onclick="zero()"> 0 </button> 
-            <button class="quadratButton" onclick="x()"> X </button>
-            <button class="quadratButton" onclick="del()"> del </button>  
-            <button class="quadratButton" onclick="zeichnen()"> go </button>           
+        <!-- Weitere Zeilen mit Tasten -->
+        <div class="zeile">
+            <button class="quadratButton" onclick="vier()">4</button>
+            <button class="quadratButton" onclick="fünf()">5</button>
+            <button class="quadratButton" onclick="sechs()">6</button>
+            <button class="quadratButton" onclick="mal()">×</button>
+            <button class="quadratButton" onclick="geteilt()">/</button>
         </div>
         <div class="zeile">
-            <button class="rechteckigerButton" onclick="speichereFunktion()"> Speichern</button>
+            <button class="quadratButton" onclick="sieben()">7</button>
+            <button class="quadratButton" onclick="acht()">8</button>
+            <button class="quadratButton" onclick="neun()">9</button>
+            <button class="quadratButton" onclick="hoch()">^</button>
+            <button class="quadratButton" onclick="wurzel()">√</button>
         </div>
+        <div class="zeile">
+            <button class="quadratButton" onclick="zero()">0</button>
+            <button class="quadratButton" onclick="x()">X</button>
+            <button class="quadratButton" onclick="del()">del</button>
+            <button class="quadratButton" onclick="zeichnen()">go</button>
+        </div>
+        <div class="zeile">
+            <!-- Button zum Speichern der eingegebenen Funktion -->
+            <button class="rechteckigerButton" onclick="speichereFunktion()">Speichern</button>
+        </div>
+        <!-- Bereich zur Anzeige der gespeicherten Funktionen -->
         <div><ul id="gespeicherteFunktionen"></ul></div>
-        </div>
     </div>
+    <!-- Eingabebereich für den Zoomfaktor -->
     <div class="zoomeingabe">
         <div class="zeile">
-            <div class="term" id="zoom" contenteditable="true" ></div>
+            <div class="term" id="zoom" contenteditable="true"></div>
             <button class="quadratButton" onclick="zoombearbeitung()">✓</button>
         </div>
     </div>
-    <div class="beschreibungGr"> 
-        <h1> Beschreibung </h1>
+    <!-- Beschreibung des Grafikrechners -->
+    <div class="beschreibungGr">
+        <h1>Beschreibung</h1>
         <ul>
-            <li> ERSTER PUNKT  </li>
-            <li> ZWEITER PUNKT </li>
+            <li>ERSTER PUNKT</li>
+            <li>ZWEITER PUNKT</li>
         </ul>
-    </div>   
+    </div>
 </body>
 </html>

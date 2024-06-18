@@ -1,56 +1,58 @@
 <html>
 <head>
 <title>Taschenrechner</title>
+<!-- Verlinkung zu externer CSS-Datei -->
 <link rel="stylesheet" href="./stil.css">
+<!-- Einbindung der JavaScript-Datei -->
 <script src="./trsscript.js"></script>
 </head>
 <body>
+    <!-- Link zu Grafikrechner-Seite -->
     <a href="/grafikrechner.html">Grafikrechner</a>
     <div class="spalten">
+        <!-- Bereich für den Taschenrechner -->
         <div class="rechnerumgebung">
-            <div class="display" id="display">  </div>
-
+            <!-- Display des Taschenrechner-->
+            <div class="display" id="display"></div>
+            <!-- Zeile mit Tasten -->
             <div class="zeile">
-                <button class="quadratButton" onclick="eins()"> 1 </button>
-                <button class="quadratButton" onclick="zwei()">  2 </button>
-                <button class="quadratButton" onclick="drei()"> 3 </button>
-                <button class="quadratButton" onclick="plus()"> + </button>
-                <button class="quadratButton" onclick="prozent()"> % </button>
+                <button class="quadratButton" onclick="eins()">1</button>
+                <button class="quadratButton" onclick="zwei()">2</button>
+                <button class="quadratButton" onclick="drei()">3</button>
+                <button class="quadratButton" onclick="plus()">+</button>
+                <button class="quadratButton" onclick="prozent()">%</button>
             </div>
-
+            <!-- Weitere Zeilen mit Tasten -->
             <div class="zeile">
-                <button class="quadratButton" onclick="vier()"> 4 </button>
-                <button class="quadratButton" onclick="fünf()"> 5 </button>
-                <button class="quadratButton" onclick="sechs()"> 6 </button>
-                <button class="quadratButton" onclick="minus()"> - </button>
-                <button class="quadratButton" onclick="potenz()"> ** </button>
+                <button class="quadratButton" onclick="vier()">4</button>
+                <button class="quadratButton" onclick="fünf()">5</button>
+                <button class="quadratButton" onclick="sechs()">6</button>
+                <button class="quadratButton" onclick="minus()">-</button>
+                <button class="quadratButton" onclick="potenz()">**</button>
             </div>
-
             <div class="zeile">
-                <button class="quadratButton" onclick="sieben()"> 7 </button>
-                <button class="quadratButton" onclick="acht()"> 8 </button>
-                <button class="quadratButton" onclick="neun()"> 9 </button>
-                <button class="quadratButton" onclick="mal()"> × </button>
-                <button class="quadratButton" onclick="resultat()"> =  </button>
+                <button class="quadratButton" onclick="sieben()">7</button>
+                <button class="quadratButton" onclick="acht()">8</button>
+                <button class="quadratButton" onclick="neun()">9</button>
+                <button class="quadratButton" onclick="mal()">×</button>
+                <button class="quadratButton" onclick="resultat()">=</button>
             </div>
-
             <div class="zeile">
-                <button class="quadratButton" onclick="zero()"> 0 </button>
-                <button class="quadratButton" onclick="komma()"> . </button>
-                <button class="quadratButton" onclick="wurzel()"> √ </button>
-                <button class="quadratButton" onclick="geteilt()"> ÷ </button>
-                <button class="quadratButton" onclick="del()"> del  </button>
+                <button class="quadratButton" onclick="zero()">0</button>
+                <button class="quadratButton" onclick="komma()">.</button>
+                <button class="quadratButton" onclick="wurzel()">√</button>
+                <button class="quadratButton" onclick="geteilt()">÷</button>
+                <button class="quadratButton" onclick="del()">del</button>
             </div>
         </div>
+        <!-- Bereich zur Beschreibung des Taschenrechners -->
         <div class="beschreibung">
             <h1>Beschreibung</h1>
             <ul>
-                <li>bei der Wurzel muss zuerst die zahl in der Wurzel geschrieben werden und dann die wie vielte Wurzel.</li>
-                <li>zweiter Punkt</li>
+                <li>Bei der Wurzel muss zuerst die Zahl in der Wurzel geschrieben werden und dann die wievielte Wurzel.</li>
+                <li>Zweiter Punkt</li>
             </ul>
         </div>
     </div>
 </body>
-
-
 </html>
