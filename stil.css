@@ -7,20 +7,20 @@ html, body {
 .display {
     border-radius: 18px;
     border-style: solid;
-    border-color: #89CFF0; /* Himmelblau */
+    border-color: #89CFF0;
     margin: 0px;
     width: 208px;
     height: 60px;
     text-align: center;
-    background-color: #E0FFFF; /* Hellcyan */
+    background-color: #E0FFFF;
 }
 
 button {
     margin: 2px;
     border-radius: 12px;
     border-style: solid;
-    border-color: #89CFF0; /* Himmelblau */
-    background-color: #FFDDC1; /* Hellorange */
+    border-color: #89CFF0; 
+    background-color: #FFDDC1; 
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -35,8 +35,8 @@ button {
 }
 
 button:hover {
-    background-color: #98FB98; /* Hellgrün */
-    border-color: #4682B4; /* Stahlblau */
+    background-color: #98FB98; 
+    border-color: #4682B4;
 }
 
 .zeile {
@@ -50,7 +50,7 @@ button:hover {
 }
 
 .beschreibung {
-    background-color: #FFDDC1; /* Hellorange */
+    background-color: #FFDDC1;
     width: 50%;
     height: 100%;
     padding: 15px;
@@ -68,7 +68,7 @@ button:hover {
 }
 
 .beschreibungGr {
-    background-color: #FFDDC1; /* Hellorange */
+    background-color: #FFDDC1; 
     position: absolute;
     top: 100%;
     width: 100%;
@@ -83,23 +83,26 @@ button:hover {
     height: 25px;
     border-radius: 18px; 
     border-style: solid;
-    border-color: #89CFF0; /* Dunkelgrau */
-    background-color: #E0FFFF; /* Hellgrau */
+    border-color: #89CFF0; 
+    background-color: #E0FFFF; 
     font-family: Arial, Helvetica, sans-serif;      
 }
 
 .term {    
-    background-color: #E0FFFF; /* Hellgrau */
+    background-color: #E0FFFF; 
     margin: 2px; 
     width: 160px; 
     height: 25px; 
     text-align: center;
     border-radius: 18px; 
     border-style: solid; 
-    border-color: #89CFF0; /* Dunkelgrau */
+    border-color: #89CFF0; 
 }
 
 canvas {
+    border-radius: 16px;
+    border-style: solid;
+    border-color: #89CFF0; 
     display: block;
     position: absolute;
     top: 20%;
@@ -108,20 +111,20 @@ canvas {
     height: 400%;
 }
 
-a { /* Gestaltung der Links */
-    color: #000; /* Schwarz */
+a { 
+    color: #000; 
     margin: 20px;
-    background-color: #FFDDC1; /* Hellorange */
+    background-color: #FFDDC1;
     border-radius: 18px;
     border-style: solid;
-    border-color: #89CFF0; /* Himmelblau */
+    border-color: #89CFF0; 
     padding: 4px;
     text-decoration: none; 
     transition: color 0.3s ease; 
 }
 
 a:hover {
-    color: #8B4513; /* Sienna */
+    color: #8B4513; 
     text-decoration: inherit; 
 }
 
@@ -129,8 +132,9 @@ a:hover {
 
 .zoomeingabe {
     position: absolute;
-    margin-left: 40%;
-    margin-top: 7.5%;
+    margin-left: 30%;
+    margin-top: 10%;
+    
 }
 .kleinerButton{
     width: 17px;

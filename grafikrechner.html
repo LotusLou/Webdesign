@@ -56,22 +56,22 @@
             <button class="rechteckigerButton" onclick="speichereFunktion()">Speichern</button>
             <button class="quadratButton" onclick="komma()">.</button>
         </div>
+        <!-- Eingabebereich für den Zoomfaktor -->
+        <div class="zoomeingabe">
+            <div class="zeile">
+                <div class="term" id="zoom" contenteditable="true"></div>
+                <button class="quadratButton" onclick="zoombearbeitung()">✓</button>
+            </div>
+        </div>
         <!-- Bereich zur Anzeige der gespeicherten Funktionen -->
         <div><ul id="gespeicherteFunktionen"></ul></div>
-    </div>
-    <!-- Eingabebereich für den Zoomfaktor -->
-    <div class="zoomeingabe">
-        <div class="zeile">
-            <div class="term" id="zoom" contenteditable="true"></div>
-            <button class="quadratButton" onclick="zoombearbeitung()">✓</button>
-        </div>
     </div>
     <!-- Beschreibung des Grafikrechners -->
     <div class="beschreibungGr">
         <h1>Beschreibung</h1>
         <ul>
             <li>Dieser Grafik rechner hat die Normalen Operationen aber auch erweiterte Operationen.</li>
-            <li>Die Speicher Taste erstellt eine Liste wo die gespeicherten Funktionen abgebildet werden.</li>
+            <li>Die Speicher Taste erstellt eine Liste wo die gespeicherten Funktionen abgebildet werden. Bei Klicken auf ein Listenelement wird dieses Gezeichnet.</li>
             <li>Der Taschenrechner ist mit einem Grafikrechner verlinked, auf welchen man mit dem Knopf oben Links zugreifen kann</li>
             <li>Die Eingabe unterdem Kordinatensystem ist für die Veränderung der Grösse des Kordinatensystems.</li>
             <li>Beide Eingabefelder können auch direkt bedient werden.</li>
