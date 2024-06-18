@@ -142,6 +142,18 @@ function hoch(){
 function wurzel(){
     demTermhinzufügen("√")
 }
+//Funktion für die offene Klammer
+function klammer1(){
+    demTermhinzufügen("(")
+}
+//Funktion für die geschlossene Klammer
+function klammer2(){
+    demTermhinzufügen(")")
+}
+//Funktion des Kommas
+function komma(){
+    demTermhinzufügen(".")
+}
 //Funktion fürs Löschen des Graphen
 function del(){
     graph = false
