@@ -207,5 +207,4 @@ function zoombearbeitung(){
         alert("Fehler:Ungültige Zahl")
     }
 }
-//Todo's: Liste und Zoom funktion. Verschiebung
-//Beschreibungen machen
+

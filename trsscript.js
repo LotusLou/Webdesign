@@ -1,64 +1,49 @@
+//Variabeln 
 let operation
 let operand1 
 let operand2 
 
-
+//Funktionen für das Hinzufügen der Zahlen
 function eins (){
-    let aktuelleEingabe = document.getElementById("display").innerText;
-    document.getElementById("display").innerHTML = aktuelleEingabe + "1";
+    hinzufügenZahl("1")
 }
 
 function zwei(){
-    let aktuelleEingabe = document.getElementById("display").innerText;
-    document.getElementById("display").innerHTML = aktuelleEingabe + "2";
+    hinzufügenZahl("2")
 }
 
 function drei(){
-    let aktuelleEingabe = document.getElementById("display").innerText;
-    document.getElementById("display").innerHTML = aktuelleEingabe + "3";
+    hinzufügenZahl("3")
 }
 
 function vier(){
-    let aktuelleEingabe = document.getElementById("display").innerText;
-    document.getElementById("display").innerHTML = aktuelleEingabe + "4";
+    hinzufügenZahl("4")
 }
 
 function fünf(){
-    let aktuelleEingabe = document.getElementById("display").innerText;
-    document.getElementById("display").innerHTML = aktuelleEingabe + "5";
+    hinzufügenZahl("5")
 }
 
 function sechs(){
-    let aktuelleEingabe = document.getElementById("display").innerText;
-    document.getElementById("display").innerHTML = aktuelleEingabe + "6";
+    hinzufügenZahl("6")
 }
 
 function sieben(){
-    let aktuelleEingabe = document.getElementById("display").innerText;
-    document.getElementById("display").innerHTML = aktuelleEingabe + "7";
+    hinzufügenZahl("7")
 }
 
 function acht(){
-    let aktuelleEingabe = document.getElementById("display").innerText;
-    document.getElementById("display").innerHTML = aktuelleEingabe + "8";
+    hinzufügenZahl("8")
 }
 
 function neun(){
-    let aktuelleEingabe = document.getElementById("display").innerText;
-    document.getElementById("display").innerHTML = aktuelleEingabe + "9";
+    hinzufügenZahl("9")
 }
 
 function zero(){
-    let aktuelleEingabe = document.getElementById("display").innerText;
-    document.getElementById("display").innerHTML = aktuelleEingabe + "0";
+    hinzufügenZahl("0")
 }
-
-function plus(){
-    operation = "+"
-    operand1 = Number( document.getElementById("display").innerText);
-    document.getElementById("display").innerHTML = "";
-}
-
+//Funktionen für das Ausrechnen des Resultates 
 function resultat(){
     operand2 = Number( document.getElementById("display").innerText);
     if (operation === "+"){
@@ -84,10 +69,11 @@ function resultat(){
     }
 }
 
-function del(){
+//funktion für die Operationen
+function plus(){
+    operation = "+"
+    operand1 = Number( document.getElementById("display").innerText);
     document.getElementById("display").innerHTML = "";
-    operand1 = ""
-    operand2 = ""
 }
 
 function minus(){
@@ -124,4 +110,15 @@ function wurzel(){
     operation = ""
     operand1 = Number( document.getElementById("display").innerText);
     document.getElementById("display").innerHTML = "";
+}
+//Funktion für das Löschen des Displays 
+function del(){
+    document.getElementById("display").innerHTML = "";
+    operand1 = ""
+    operand2 = ""
+}
+//Funktion für Hinzufügen der Zahlen 
+function hinzufügenZahl(zahl){
+    let aktuelleEingabe = document.getElementById("display").innerText;
+    document.getElementById("display").innerHTML = aktuelleEingabe + zahl;
 }
